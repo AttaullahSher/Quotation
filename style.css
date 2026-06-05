@@ -1,0 +1,318 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: #1e2a44;
+    color: white;
+    padding: 1.8rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo h1 {
+    font-size: 1.55rem;
+    font-weight: 700;
+}
+
+.logo p {
+    color: #a5b4d0;
+}
+
+.quotation-info h2 {
+    font-size: 1.55rem;
+}
+
+.hero {
+    background: linear-gradient(rgba(30,42,68,0.85), rgba(30,42,68,0.85)), url('piano-bg.jpg') center/cover;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section {
+    margin: 4rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #1e2a44;
+    margin-bottom: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3b5a9e;
+}
+
+.piano-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.piano-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.piano-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* Square Tile Images */
+.piano-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 1.4rem;
+}
+
+.brand {
+    color: #3b5a9e;
+    font-weight: 500;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e2a44;
+    margin: 12px 0;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.modal-content {
+    background: white;
+    max-width: 1050px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    background: #fff;
+    color: #e74c3c;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #e74c3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.modal-close:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+.modal-body {
+    display: flex;
+    gap: 2rem;
+    padding: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.modal-gallery { flex: 1; min-width: 280px; }
+.main-image-container {
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+#main-image { width: 100%; height: 100%; object-fit: cover; }
+
+.thumbnail-strip {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.thumbnail:hover, .thumbnail.active {
+    border-color: #3b5a9e;
+    transform: scale(1.05);
+}
+
+.modal-details { flex: 1; min-width: 300px; }
+#modal-title { font-size: 2rem; color: #1e2a44; }
+.price { font-size: 2rem; font-weight: 700; color: #1e2a44; margin: 1rem 0; }
+
+.condition {
+    background: #f0f4ff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #1e2a44;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.description {
+    margin: 1.2rem 0;
+    color: #444;
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+.specs li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-quote-btn {
+    width: 100%;
+    padding: 16px;
+    background: #1e2a44;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+/* Selection Box */
+.selection-box {
+    background: #fff;
+    border: 2px solid #3b5a9e;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0;
+}
+
+.selection-box h3 {
+    margin-bottom: 1rem;
+    color: #1e2a44;
+}
+
+.selected-item {
+    padding: 15px;
+    background: #f0f4ff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.total {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e2a44;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+}
+
+/* WhatsApp Button */
+.whatsapp-checkout-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 16px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.whatsapp-checkout-btn:hover {
+    background: #1eb355;
+}
+
+.footer {
+    background: #1e2a44;
+    color: #ddd;
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 12px 28px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .modal-body { flex-direction: column; }
+    .hero-title { font-size: 2.2rem; }
+    .thumbnail { width: 75px; height: 75px; }
+}

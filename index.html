@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKM Music - Quotation 26651</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Ajmal Khan Mohammed Music Centre LLC</h1>
+                    <p>AKM Music • Abu Dhabi</p>
+                </div>
+                <div class="quotation-info">
+                    <h2>Quotation #26651</h2>
+                    <p id="current-date"></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1 class="hero-title">Piano Quotation</h1>
+            <p class="hero-subtitle">Professionally Refurbished Pianos • Delivery, Bench & One Free Tuning Included</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">Available Pianos</h2>
+            <div class="piano-grid" id="piano-grid"></div>
+        </section>
+
+        <!-- Selected Item (Only 1 allowed) -->
+        <div class="selection-box" id="selection-box">
+            <h3>Selected Piano</h3>
+            <div id="selected-items"></div>
+            <div class="total" id="total-price">Total: 0 AED</div>
+            
+            <button class="whatsapp-checkout-btn" id="whatsapp-checkout">
+                💬 Confirm Order on WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer Contact -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Ajmal Khan Mohammed Music Centre LLC</strong> • Abu Dhabi, UAE</p>
+            <p>Tel: 02 621 9929 &nbsp; | &nbsp; Mobile: 050 641 8963 &nbsp; | &nbsp; sales@akm-music.com</p>
+            <a href="https://wa.me/971506418963" target="_blank" class="whatsapp-btn">💬 WhatsApp Us</a>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">✕</button>
+            
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <div class="main-image-container">
+                        <img id="main-image" src="" alt="">
+                    </div>
+                    <div class="thumbnail-strip" id="thumbnail-strip"></div>
+                </div>
+
+                <div class="modal-details">
+                    <h2 id="modal-title"></h2>
+                    <div class="price" id="modal-price"></div>
+                    
+                    <div class="condition">Condition: Professionally Refurbished</div>
+                    <p class="description" id="modal-description"></p>
+
+                    <div class="specs">
+                        <h3>Specifications</h3>
+                        <ul id="modal-specs"></ul>
+                    </div>
+
+                    <div class="included">
+                        <h3>Package Includes</h3>
+                        <ul>
+                            <li>Professional Delivery & Setup</li>
+                            <li>Matching Adjustable Bench</li>
+                            <li>One Free Tuning (within 30 days)</li>
+                        </ul>
+                    </div>
+
+                    <button class="add-to-quote-btn" id="add-to-quote">Select This Model</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
